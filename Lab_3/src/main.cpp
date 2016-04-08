@@ -12,10 +12,10 @@ int main(int argc, char ** argv)
 	Timer time;
 	Test test;
 
-	test.Przygotuj();
+	test.Przygotuj(1);
 	cout << "Poczatek badan." << endl;
 	time.Start();
-	test.Badaj();
+	test.Badaj(1);
 	time.Stop();
 	cout << "Czas: " << time.Show() << " ms."<< endl;
 

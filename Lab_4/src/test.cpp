@@ -9,37 +9,29 @@
 #include "../inc/list.h"
 
 
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
 
 using namespace std;
 
-#define N 200000000
+
 
 void Test::Przygotuj(int n)
 {
-	try
-	{
-		lista.Fill(n);
-	}
-	catch(const char* str)
-	{
+	std::srand(std::time(0));
 
-	}
+	for(int i = 0; i < n; i++)
+		lista.add(rand(),0);
+
+
+	sort.Sort(&lista);
 
 
 }
 
 void Test::Badaj(int n)
 {
-	int pos = 0;
-	try
-	{
-		pos = lista.Find(2);
-	}
-	catch(const char* str)
-	{
 
-	};
 }

@@ -9,16 +9,18 @@
 #ifndef TABTEST_H_
 #define TABTEST_H_
 
-#include "list.h"
+#include "../imp/list.h"
 #include "queue.h"
 #include "stack.h"
+#include "quicksort.h"
 
 class Test
 {
 private:
-	List  lista;
+	list  lista;
 	Stack stos;
 	Queue kolejka;
+	QuickSort sort;
 public:
 	unsigned int problem_size;
 	virtual void Badaj    (int n);
