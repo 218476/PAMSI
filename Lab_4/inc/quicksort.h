@@ -9,15 +9,13 @@
 #define INC_QUICKSORT_H_
 
 #include "../imp/list.h"
+#include "interface/sortinterface.h"
 
-
-class QuickSort
+class QuickSort : public SortInterface
 {
 private:
 	int*  tab;
 	int tab_size;
-	int Divide(int a, int b);
-	void Replace(int a, int b);
 	void Sort(int a, int b);
 public:
 	list* Sort(list* lista);

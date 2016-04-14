@@ -22,16 +22,15 @@ void Test::Przygotuj(int n)
 {
 	std::srand(std::time(0));
 
+	for(int i = 0; i < lista.size(); i++)
+		lista.remove(0);
+
 	for(int i = 0; i < n; i++)
 		lista.add(rand(),0);
-
-
-	sort.Sort(&lista);
-
 
 }
 
 void Test::Badaj(int n)
 {
-
+	sort.Sort(&lista);
 }

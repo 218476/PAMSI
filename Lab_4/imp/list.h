@@ -5,6 +5,7 @@
 class list : public ilist
 {
 private:
+	int Size;
   element *first=nullptr; /*wskaznik na pierwszy element listy*/
   element* search(int); /*wyszukuje w liscie element o zadanej pozycji i zwraca wskaznik na ten element*/
  public: /*implementacja metod odziedziczonych z interface listy*/
@@ -12,6 +13,7 @@ private:
   void remove(int);
   int get(int);
   int size();
+  list();
 
 };
 

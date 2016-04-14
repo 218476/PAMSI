@@ -1,15 +1,10 @@
 #include "list.h"
 int list::size()
 {
-  int i=0;
-  element *test=first;
-  while(test!=nullptr)
-    {
-      test=test->next;
-      i++;
-    }
-  return i;
+return Size;
 }
+
+
 
 element* list::search(int position){
 element *test=first;
@@ -38,6 +33,7 @@ if(size()>=position){
   temp->next=temp2->next;
   delete temp2;
   }
+Size--;
 }
 
 int list::get(int position){
@@ -55,19 +51,27 @@ temp=search(position);
 int list::add(int numb, int position){
   element *nowy = new element;
   element *temp, *temp2;
-double s=size();
+double s=Size;
   nowy->ele=numb;
-if(s!=0){
-if(s<position)
-position=s;
-temp=search(position);
-temp2=temp->next;
-temp->next=nowy;
-nowy->next=temp2;
+if(s!=0)
+{
+	if(s<position)
+		position=s;
+	temp=search(position);
+	temp2=temp->next;
+	temp->next=nowy;
+	nowy->next=temp2;
 }
-else{
-nowy->next=nullptr;
-first=nowy;}
-  return size();
+else
+{
+	nowy->next=nullptr;
+	first=nowy;
+}
+Size++;
+  return Size;
 }
 
+list::list()
+{
+	Size = 0;
+}

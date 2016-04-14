@@ -15,7 +15,7 @@ using namespace std;
 list* QuickSort::Sort(list* lista)
 {
 	tab = new int[lista->size()];
-	tab_size = lista->size() - 1;
+	tab_size = lista->size();
 
 	for(int i = 0;i < tab_size; i++)
 	{
@@ -24,18 +24,14 @@ list* QuickSort::Sort(list* lista)
 		lista->remove(1);
 	}
 
-	for(int i = 0; i < tab_size; i++)
-		cout << tab[i] << endl;
-	cout << endl;
+	Sort(0,tab_size - 1);
 
-	Sort(0,tab_size );
 
 
 	for(int i = 0; i < tab_size; i++)
-		cout << tab[i] << endl;
+		lista->add(tab[i],0);
+	delete[] tab;
 
-
-	//delete tab;
 	return lista;
 
 }
@@ -64,12 +60,4 @@ void QuickSort::Sort(int a, int b)
 	  if(i < b)
 		  Sort(i, b);
 
-}
-void QuickSort::Replace(int a, int b)
-{
-
-}
-int QuickSort::Divide(int a, int b)
-{
-	return 1;
 }

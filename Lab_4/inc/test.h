@@ -13,6 +13,7 @@
 #include "queue.h"
 #include "stack.h"
 #include "quicksort.h"
+#include "mergesort.h"
 
 class Test
 {
@@ -20,7 +21,7 @@ private:
 	list  lista;
 	Stack stos;
 	Queue kolejka;
-	QuickSort sort;
+	MergeSort sort;
 public:
 	unsigned int problem_size;
 	virtual void Badaj    (int n);
