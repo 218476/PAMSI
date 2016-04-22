@@ -10,11 +10,13 @@
 #define TABTEST_H_
 
 #include "map.h"
+#include <string>
 
 class Test
 {
 private:
 	Map dane;
+	std::string Rand_String();
 public:
 	unsigned int problem_size;
 	virtual void Badaj    (int n);

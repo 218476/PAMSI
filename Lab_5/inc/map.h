@@ -8,22 +8,26 @@
 #ifndef INC_MAP_H_
 #define INC_MAP_H_
 
-#define START_BUCKET_AMOUNT 10
+#define BUCKET_AMOUNT 10000
 
 
 
 #include <string>
 #include "interface/mapinterface.h"
 #include "list.h"
+#include "hash.h"
+
 
 class Map : public MapInterface
 {
 private:
 	List* data;
+	Hash  hash;
 public:
 
-	virtual int	 operator[](std::string key);
-	 void Add       (std::string key, int value);
+	 virtual int	 operator[](std::string key);
+	 virtual void Add       (std::string key, int value);
+	 virtual void Remove	(std::string key);
 	Map();
 };
 

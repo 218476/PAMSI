@@ -17,6 +17,7 @@ private:
 public:
 	virtual int	 operator[](std::string key)            = 0;
 	virtual void Add       (std::string key, int value) = 0;
+	virtual void Remove    (std::string key) = 0;
 };
 
 
