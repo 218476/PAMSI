@@ -15,14 +15,13 @@ int main(int argc, char ** argv)
 	queue test_queue;
 	fstream plik;
 
-	plik.open("wyniki_bezhash.txt", ios::app | ios::out);
+	plik.open("wyniki.txt", ios::app | ios::out);
 	plik << "------------------------------" << endl;
 	plik << "-----------Nowy pommiar-------" << endl;
 	plik << "------------------------------" << endl;
 
 	int tmp = 0;
-	float avrg = 0;
-	int max = 10;
+
 	test_queue.push(10);
 	test_queue.push(100);
 	test_queue.push(1000);
@@ -35,27 +34,15 @@ int main(int argc, char ** argv)
 
 	while(test_queue.size() > 0)
 	{
-
 		tmp = test_queue.pop();
 		test.Przygotuj(tmp);
-		plik << "Rozmiar problemu: " << tmp << " Ilosc bucketow: " << BUCKET_AMOUNT << endl;
-		max = tmp;
-		if(max > 100) max = 100;
-		//for(int i = 0; i < max; i++)
-		{
-			try
-			{
-				test.Badaj(tmp);
-			}
-			catch(float perioid)
-			{
 
-				avrg += perioid;
-			}
-		}
-		plik << "    " << avrg / max <<  endl;
+		time.Start();
+		test.Badaj(tmp);
+		time.Stop();
 
-
+		plik << "Rozmiar problemu: " << tmp << " - czas: " << (float)time.Show()/tmp << endl;
+		cout << "Rozmiar problemu: " << tmp << " - czas: " << (float)time.Show()/tmp << endl;
 	}
 	return 0;
 }

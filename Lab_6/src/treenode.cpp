@@ -10,7 +10,14 @@
 
 #include "../inc/treenode.h"
 
-
+TreeNode::TreeNode()
+{
+	this->color = false;
+	this->value = 0;
+	this->up    = nullptr;
+	this->left	= nullptr;
+	this->right = nullptr;
+}
 bool TreeNode::Get_Color()
 {
 	return this->color;

@@ -29,6 +29,7 @@ public:
 	TreeNode* Get_Right ();
 	bool      Get_Color ();
 	int       Get_Value ();
+			  TreeNode  ();
 };
 
 

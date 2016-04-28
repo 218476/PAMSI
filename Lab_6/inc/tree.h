@@ -10,6 +10,8 @@
 
 #include "interface/treeinterface.h"
 #include "treenode.h"
+#include <string>
+#include <iostream>
 
 #define BLACK true
 #define RED   false
@@ -20,6 +22,8 @@
 class Tree : public TreeInterface
 {
 private:
+	std::string cr,cl,cp;       // Łańcuchy do znaków ramek
+
 	TreeNode* end;
 	TreeNode* root;
 	void RotateL(TreeNode* node);

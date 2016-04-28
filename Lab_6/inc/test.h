@@ -9,13 +9,13 @@
 #ifndef TABTEST_H_
 #define TABTEST_H_
 
-#include "map.h"
+#include "tree.h"
 #include <string>
 
 class Test
 {
 private:
-	Map dane;
+	Tree dane;
 	std::string Rand_String();
 public:
 	unsigned int problem_size;
