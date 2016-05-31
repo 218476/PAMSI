@@ -10,6 +10,8 @@
 
 #include "graph.h"
 #include "list.h"
+#include "queue.h"
+
 
 class Find
 {
@@ -19,9 +21,11 @@ private:
 	bool DST_Rec(int a, int b);
 	Graph* ptr;
 public:
-	bool BST (int a, int b);
-	bool DST (int a, int b, Graph* ptr);
-		 Find(int n);
+	bool BST 			(int a, int b, Graph* ptr);
+	bool DST 			(int a, int b, Graph* ptr);
+	int  BB 		 	(int a, int b, Graph* ptr);
+	int  BB_Extended	(int a, int b, Graph* ptr);
+		 Find			(int n);
 };
 
 

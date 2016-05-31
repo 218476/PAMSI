@@ -10,29 +10,29 @@ int main(int argc, char ** argv)
 {
 	Timer time;
 	Test  test;
-	fstream plik;
+	//fstream plik;
 
-	plik.open("wyniki.txt", ios::app | ios::out);
-	plik << "------------------------------" << endl;
-	plik << "-----------Nowy pommiar-------" << endl;
-	plik << "------------------------------" << endl;
+	//plik.open("wyniki.txt", ios::app | ios::out);
+	//plik << "------------------------------" << endl;
+	//plik << "-----------Nowy pommiar - BST-" << endl;
+	//plik << "------------------------------" << endl;
 
 	int tmp = 0;
 
 
 
-	for(int i = 1; i < 7; i++)
+	for(int i = 1; i < 5; i++)
 	{
 		tmp = pow(10,i);
 		test.Przygotuj(tmp);
 
-		cout << "START" << endl;
+		cout << "Rozmiar problemu: " << tmp << endl;
 		time.Start();
 		test.Badaj(tmp);
 		time.Stop();
 
-		plik << "Rozmiar problemu: " << tmp << "    czas: " << time.Show() << endl;
-		cout << "Rozmiar problemu: " << tmp << "    czas: " << time.Show() << endl;
+		//plik << "Rozmiar problemu: " << tmp << "    czas: " << time.Show() << endl;
+
 	}
 	return 0;
 }

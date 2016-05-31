@@ -12,21 +12,27 @@
 
 Graph::Graph(int size)
 {
+	edges  = new List[size + 1];
+	vertex = new int [size + 1];
 
+	cost_matrix = new int*[size + 1];
+	for(int i = 0; i <= size;i++)
+		cost_matrix[i] = new int[size + 1];
 
-
-	edges = new List[size + 1];
-	vertex = new int[size + 1];
-
+	for(int i = 0; i <= size; i++)
+		for(int j = 0; j <= size; j++)
+			cost_matrix[i][j] = -1;
 
 	this->size = 0;
 }
-void Graph::Add_Edge(int a, int b)
+void Graph::Add_Edge(int a, int b, int weight)
 {
 	if((a != b) && (a >= 0) && (b >= 0) && (a < size) && (b < size))
 	{
 		edges[a].Add(0,"",b);
 		edges[b].Add(0,"",a);
+		cost_matrix[a][b] = weight;
+		cost_matrix[b][a] = weight;
 	}
 }
 
@@ -52,4 +58,15 @@ bool Graph::Is_Connected(int a, int b)
 			return true;
 	}
 	return false;
+}
+
+int Graph::Get_Weight(int a, int b)
+{
+	int tmp = cost_matrix[a][b];
+	return tmp;
+}
+
+int Graph::Get_Size()
+{
+	return size;
 }

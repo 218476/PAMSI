@@ -18,6 +18,7 @@ class Test
 {
 private:
 
+
 	Graph* tst;
 	Find*  find;
 public:

@@ -1,7 +1,7 @@
 CXX=g++
 
 
-OBJS=./obj/main.o ./obj/timer.o ./obj/test.o ./obj/list.o ./obj/node.o ./obj/graph.o ./obj/find.o
+OBJS=./obj/main.o ./obj/timer.o ./obj/test.o ./obj/list.o ./obj/node.o ./obj/graph.o ./obj/find.o ./obj/queue.o
 
 
 
@@ -29,6 +29,9 @@ Lab.out: $(OBJS)
 
 ./obj/find.o: ./src/find.cpp
 	$(CXX) -c ./src/find.cpp -std=c++11 -o ./obj/find.o
+
+./obj/queue.o: ./src/queue.cpp
+	$(CXX) -c ./src/queue.cpp -std=c++11 -o ./obj/queue.o
 
 clean:
 	rm -f ./obj/*.o *.out

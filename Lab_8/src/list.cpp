@@ -50,6 +50,8 @@ void List::Add(int pos,std::string name, int value)
 }
 void List::Remove(int pos)
 {
+	Node* tmp;
+
 	if(Range_Check(pos))
 	{
 		if(pos == 0)
