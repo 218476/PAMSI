@@ -35,3 +35,22 @@ Poprawny wynik badania złożoności.
 ## Lab5 - sortowanie
 
 ## Lab6 - tablica asocjacyjna
+
+Brak implementacji dynamicznego zwiekszania liczby bucketow i rehashowania.
+
+Ocena: 4
+
+## Lab7 - drzewa
+
+Wyniki eksperymentu nie pozwalają określić złożoności, a co za tym idzie poprawności
+implementacji. Sprawozdanie poprawne.
+
+Ocena: 4,5
+
+## Lab8 - grafy (dfs,bfs)
+
+Ocena: 5
+
+## Lab9 - grafy (b&b)
+
+Ocena: 5
